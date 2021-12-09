@@ -13,7 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'layouts.shop.master');
+Route::view('/', 'shop.index');
+Route::view('/details', 'shop.detail');
+Route::view('/carts', 'shop.cart');
+Route::view('/checkouts', 'shop.checkout');
 
 Auth::routes();
 
