@@ -131,7 +131,7 @@
                         </span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
-                        <a class="dropdown-item" href="{{ route('shop.index') }}">
+                        {{-- <a class="dropdown-item" href="{{ route('shop.index') }}"> --}}
                             <i data-feather="shopping-bag" class="svg-icon mr-2 ml-1"></i>
                             Shop
                         </a>
