@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GoodsController;
+use App\Http\Controllers\SellerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,7 @@ Auth::routes();
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::view('admin/dashboard', 'layouts.admin.master');
     Route::resource('goods', GoodsController::class);
+    Route::resource('sellers', SellerController::class);
 });
 
 Route::middleware(['auth', 'penjual'])->group(function () {

@@ -23,7 +23,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item {{ Request::segment(1) === 'sellers' ? 'selected' : '' }}">
-                        {{-- <a class="sidebar-link sidebar-link" href="{{ route('sellers.index') }}" aria-expanded="false"> --}}
+                        <a class="sidebar-link sidebar-link" href="{{ route('sellers.index') }}" aria-expanded="false">
                             <i data-feather="user" class="feather-icon"></i>
                             <span class="hide-menu">Manajemen Penjual</span>
                         </a>
