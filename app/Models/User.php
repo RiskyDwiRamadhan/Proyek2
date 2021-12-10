@@ -53,4 +53,48 @@ class User extends Authenticatable
         return $this->hasOne(UserDetail::class);
     }
 
+    public function isAdmin()
+    {
+        if($this->role == 'admin')
+        { 
+            return true; 
+        } 
+        else 
+        { 
+            return false; 
+        }
+    }
+
+    public function isPenjual()
+    {
+        if($this->role == 'penjual')
+        { 
+            return true; 
+        } 
+        else 
+        { 
+            return false; 
+        }
+    }
+
+    public function isPembeli()
+    {
+        if($this->role == 'pembeli')
+        { 
+            return true; 
+        } 
+        else 
+        { 
+            return false; 
+        }
+    }
+
+    public function hasRole($role) {
+        switch ($role) {
+            case 'admin': return \Auth::user()->isAdmin();
+            case 'penjual': return \Auth::user()->isPenjual();
+            case 'pembeli': return \Auth::user()->isPembeli();
+        }
+        return false;
+    }
 }

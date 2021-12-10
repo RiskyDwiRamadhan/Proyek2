@@ -22,16 +22,19 @@ Route::view('/checkouts', 'shop.checkout');
 
 Auth::routes();
 
-Route::middleware(['auth', 'admin'])->group(function () {
+Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::view('admin/dashboard', 'layouts.admin.master');
-    Route::resource('goods', GoodsController::class);
     Route::resource('sellers', SellerController::class);
 });
 
-Route::middleware(['auth', 'penjual'])->group(function () {
+Route::middleware(['auth', 'role:penjual'])->group(function () {
     Route::view('penjual/dashboard', 'layouts.admin.master');
 });
 
-Route::middleware(['auth', 'pembeli'])->group(function () {
+Route::middleware(['auth', 'role:admin,penjual'])->group(function () {
+    Route::resource('goods', GoodsController::class);
+});
+
+Route::middleware(['auth', 'role:pembeli'])->group(function () {
     Route::view('pembeli/dashboard', 'layouts.admin.master');
 });
