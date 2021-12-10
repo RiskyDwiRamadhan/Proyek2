@@ -28,17 +28,17 @@
                     <div class="sidebar__item">
                         <h4>Kategori</h4>
                         <ul>
-                            <li><a href="{{ route('shop.filterCategory', 'sayur segar') }}" class="{{ Request::segment(2) === 'sayur segar' ? 'text-primary font-weight-bold' : '' }}">Sayuran Segar</a></li>
+                            {{-- <li><a href="{{ route('shop.filterCategory', 'sayur segar') }}" class="{{ Request::segment(2) === 'sayur segar' ? 'text-primary font-weight-bold' : '' }}">Sayuran Segar</a></li>
                             <li><a href="{{ route('shop.filterCategory', 'buah segar') }}" class="{{ Request::segment(2) === 'buah segar' ? 'text-primary font-weight-bold' : '' }}">Buah-Buahan</a></li>
                             <li><a href="{{ route('shop.filterCategory', 'daging segar') }}" class="{{ Request::segment(2) === 'daging segar' ? 'text-primary font-weight-bold' : '' }}">Daging Segar</a></li>
-                            <li><a href="{{ route('shop.filterCategory', 'bumbu dapur') }}" class="{{ Request::segment(2) === 'bumbu dapur' ? 'text-primary font-weight-bold' : '' }}">Bumbu Dapur</a></li>
+                            <li><a href="{{ route('shop.filterCategory', 'bumbu dapur') }}" class="{{ Request::segment(2) === 'bumbu dapur' ? 'text-primary font-weight-bold' : '' }}">Bumbu Dapur</a></li> --}}
                         </ul>
                     </div>
                     <div class="sidebar__item">
                         <div class="latest-product__text">
                             <h4>Produk Terlaris</h4>
                             <div class="latest-product__slider owl-carousel">
-                                @foreach ($best_sellers->split($best_sellers->count()/3) as $section)
+                                {{-- @foreach ($best_sellers->split($best_sellers->count()/3) as $section)
                                     <div class="latest-prdouct__slider__item">
                                         @foreach ($section as $best_seller)
                                             <a href="{{ route('shop.show', $best_seller->id) }}" class="latest-product__item">
@@ -53,7 +53,7 @@
                                             </a>
                                         @endforeach
                                     </div>
-                                @endforeach
+                                @endforeach --}}
                             </div>
                         </div>
                     </div>
@@ -61,10 +61,10 @@
             </div>
             <div class="col-lg-9 col-md-7">
                 <div class="section-title product__discount__title">
-                    <h2>{{ $title }}</h2>
+                    {{-- <h2>{{ $title }}</h2> --}}
                 </div>
                 <div class="row">
-                    @foreach ($goods as $item)
+                    {{-- @foreach ($goods as $item)
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <a href="{{ route('shop.show', $item->id) }}">
                                 <div class="product__item">
@@ -77,7 +77,7 @@
                                 </div>
                             </a>
                         </div>
-                    @endforeach
+                    @endforeach --}}
                 </div>
                 <div class="product__pagination">
                     <a href="#">1</a>
