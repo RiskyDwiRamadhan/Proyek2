@@ -30,7 +30,7 @@
                                         {{ Auth::user()->name }}
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <a class="dropdown-item" href="{{ route('transactions.index') }}">Pesananku</a>
+                                        <a class="dropdown-item" href="#">Pesananku</a>
                                         <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Keluar</a>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                             @csrf
@@ -70,7 +70,7 @@
                     <ul>
                         @if (Auth::check())
                             <li>
-                                {{-- <a href="{{ route('shoppingCarts.index') }}"> --}}
+                                <a href="{{ route('shoppingCarts.index') }}">
                                     <i class="fa fa-shopping-bag" style="font-size: 24px"></i>
                                     @php
                                         $count = App\Models\ShoppingCart::count();

@@ -105,7 +105,7 @@
                         <ul>
                             <li>Total <span>{{ 'Rp ' . number_format($total, 0, ',', '.') }}</span></li>
                         </ul>
-                        <a href="{{ route('transactions.create') }}" class="primary-btn">Proses ke Pembayaran</a>
+                        {{-- <a href="{{ route('transactions.create') }}" class="primary-btn">Proses ke Pembayaran</a> --}}
                     </div>
                 </div>
             </div>

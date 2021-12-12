@@ -4,6 +4,7 @@ use App\Http\Controllers\GoodsController;
 use App\Http\Controllers\SellerController;
 use App\Http\Controllers\BuyerController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\ShoppingCartController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [ShopController::class, 'index'])->name('shop.index');
 Route::get('/{id}/show', [ShopController::class, 'show'])->name('shop.show');
 Route::get('/cart', [ShopController::class, 'cart'])->name('shop.cart');
+Route::resource('shoppingCarts', ShoppingCartController::class)->only('index', 'store');
+Route::put('shoppingCarts', [ShoppingCartController::class, 'update'])->name('shoppingCarts.update');
+Route::get('shoppingCarts/{id}', [ShoppingCartController::class, 'destroy'])->name('shoppingCarts.destroy');
 Route::get('/checkout', [ShopController::class, 'checkoutForm'])->name('shop.checkoutForm');
 
 Auth::routes();
