@@ -3,6 +3,7 @@
 use App\Http\Controllers\GoodsController;
 use App\Http\Controllers\SellerController;
 use App\Http\Controllers\BuyerController;
+use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'shop.index');
-Route::view('/details', 'shop.detail');
+Route::get('/', [ShopController::class, 'index'])->name('shop.index');
+Route::get('/{id}/show', [ShopController::class, 'show'])->name('shop.show');
 Route::view('/carts', 'shop.cart');
 Route::view('/checkouts', 'shop.checkout');
 

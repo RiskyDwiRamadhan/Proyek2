@@ -48,7 +48,7 @@
         <div class="row mt-3">
             <div class="col-lg-3">
                 <div class="header__logo">
-                    {{-- <a href="{{ route('shop.index') }}"> --}}
+                    <a href="{{ route('shop.index') }}">
                         <img src="{{ asset('adminmart/assets/images/text-logo.png') }}" alt=""
                             width="124" height="40">
                     </a>
@@ -70,7 +70,7 @@
                     <ul>
                         @if (Auth::check())
                             <li>
-                                <a href="{{ route('shoppingCarts.index') }}">
+                                {{-- <a href="{{ route('shoppingCarts.index') }}"> --}}
                                     <i class="fa fa-shopping-bag" style="font-size: 24px"></i>
                                     @php
                                         $count = App\Models\ShoppingCart::count();

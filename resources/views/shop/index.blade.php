@@ -64,7 +64,7 @@
                     {{-- <h2>{{ $title }}</h2> --}}
                 </div>
                 <div class="row">
-                    {{-- @foreach ($goods as $item)
+                    @foreach ($goods as $item)
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <a href="{{ route('shop.show', $item->id) }}">
                                 <div class="product__item">
@@ -77,7 +77,7 @@
                                 </div>
                             </a>
                         </div>
-                    @endforeach --}}
+                    @endforeach
                 </div>
                 <div class="product__pagination">
                     <a href="#">1</a>
