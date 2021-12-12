@@ -19,8 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ShopController::class, 'index'])->name('shop.index');
 Route::get('/{id}/show', [ShopController::class, 'show'])->name('shop.show');
-Route::view('/carts', 'shop.cart');
-Route::view('/checkouts', 'shop.checkout');
+Route::get('/cart', [ShopController::class, 'cart'])->name('shop.cart');
+Route::get('/checkout', [ShopController::class, 'checkoutForm'])->name('shop.checkoutForm');
 
 Auth::routes();
 

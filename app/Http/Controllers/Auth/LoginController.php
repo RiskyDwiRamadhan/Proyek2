@@ -39,7 +39,7 @@ class LoginController extends Controller
             }
             elseif (auth()->user()->role == 'pembeli') 
             {
-                return '/pembeli/dashboard';
+                return '/';
             }
             return '/';
         }

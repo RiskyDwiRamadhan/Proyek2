@@ -20,4 +20,8 @@ class ShopController extends Controller
         return view('shop.detail', compact('goods'));
     }
 
+    public function cart()
+    {
+        return view('shop.cart');
+    }
 }
